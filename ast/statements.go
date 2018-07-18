@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strconv"
 
-	"bitbucket.org/8pockets/hi/token"
+	"github.com/8pockets/hi/token"
 )
 
 // Statements

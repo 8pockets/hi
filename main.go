@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/user"
 
-	"bitbucket.org/8pockets/hi/repl"
+	"github.com/8pockets/hi/repl"
 )
 
 func main() {

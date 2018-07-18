@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	"bitbucket.org/8pockets/hi/evaluator"
-	"bitbucket.org/8pockets/hi/lexer"
-	"bitbucket.org/8pockets/hi/object"
-	"bitbucket.org/8pockets/hi/parser"
+	"github.com/8pockets/hi/evaluator"
+	"github.com/8pockets/hi/lexer"
+	"github.com/8pockets/hi/object"
+	"github.com/8pockets/hi/parser"
 )
 
 const PROMPT = ">> "

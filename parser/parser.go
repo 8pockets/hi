@@ -3,9 +3,9 @@ package parser
 import (
 	"fmt"
 
-	"bitbucket.org/8pockets/hi/ast"
-	"bitbucket.org/8pockets/hi/lexer"
-	"bitbucket.org/8pockets/hi/token"
+	"github.com/8pockets/hi/ast"
+	"github.com/8pockets/hi/lexer"
+	"github.com/8pockets/hi/token"
 )
 
 const (

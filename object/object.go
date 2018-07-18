@@ -6,7 +6,7 @@ import (
 	"hash/fnv"
 	"strings"
 
-	"bitbucket.org/8pockets/hi/ast"
+	"github.com/8pockets/hi/ast"
 )
 
 type BuiltinFunction func(args ...Object) Object

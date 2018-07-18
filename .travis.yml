@@ -1,11 +1,8 @@
 language: go
 sudo: false
 go:
-  - tip # The latest version of Go.
-  - 1.10
+  - "1.10"
 before_install:
   - go get github.com/mattn/goveralls
-install:
-  - go get -t -v ./...
 script:
   - $HOME/gopath/bin/goveralls -package "." -service=travis-ci

@@ -3,8 +3,8 @@ package parser
 import (
 	"testing"
 
-	"bitbucket.org/8pockets/hi/ast"
-	"bitbucket.org/8pockets/hi/lexer"
+	"github.com/8pockets/hi/ast"
+	"github.com/8pockets/hi/lexer"
 )
 
 func TestLetStatements(t *testing.T) {

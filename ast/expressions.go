@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strings"
 
-	"bitbucket.org/8pockets/hi/token"
+	"github.com/8pockets/hi/token"
 )
 
 type Identifier struct {

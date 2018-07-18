@@ -3,7 +3,7 @@ package evaluator
 import (
 	"testing"
 
-	"bitbucket.org/8pockets/hi/object"
+	"github.com/8pockets/hi/object"
 )
 
 func TestBuiltinFunctions(t *testing.T) {

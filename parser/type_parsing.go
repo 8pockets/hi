@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"bitbucket.org/8pockets/hi/ast"
-	"bitbucket.org/8pockets/hi/token"
+	"github.com/8pockets/hi/ast"
+	"github.com/8pockets/hi/token"
 )
 
 func (p *Parser) parseIdentifier() ast.Expression {

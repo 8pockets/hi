@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"bitbucket.org/8pockets/hi/ast"
+	"github.com/8pockets/hi/ast"
 )
 
 func testLiteralExpression(

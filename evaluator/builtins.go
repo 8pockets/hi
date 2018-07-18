@@ -3,7 +3,7 @@ package evaluator
 import (
 	"fmt"
 
-	"bitbucket.org/8pockets/hi/object"
+	"github.com/8pockets/hi/object"
 )
 
 var builtins = map[string]*object.Builtin{

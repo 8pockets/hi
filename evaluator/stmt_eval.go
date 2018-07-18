@@ -1,8 +1,8 @@
 package evaluator
 
 import (
-	"bitbucket.org/8pockets/hi/ast"
-	"bitbucket.org/8pockets/hi/object"
+	"github.com/8pockets/hi/ast"
+	"github.com/8pockets/hi/object"
 )
 
 func evalBlockStatement(

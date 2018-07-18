@@ -1,6 +1,6 @@
 package lexer
 
-import "bitbucket.org/8pockets/hi/token"
+import "github.com/8pockets/hi/token"
 
 type Lexer struct {
 	input        string
