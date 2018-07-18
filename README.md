@@ -3,8 +3,8 @@
   <h1 align="center">
     The Hi Programming Language
     <br>
-    <a href="http://travis-ci.org/8pockets/hi"><img alt="build-status" src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square" /></a>
-    <a href="https://github.com/sindresorhus/awesome" ><img alt="awesome" src="https://img.shields.io/badge/awesome-%E2%9C%93-ff69b4.svg?style=flat-square" /></a>
+    <a href="https://godoc.org/github.com/8pockets/hi"><img alt="build-status" src="http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square" /></a>
+    <a href="https://travis-ci.org/8pockets/hi"><img alt="build-status" src="https://img.shields.io/travis/8pockets/hi.svg?style=flat-square" /></a>
     <a href="https://github.com/8pockets/hi/blob/master/LICENSE" ><img alt="license" src="https://img.shields.io/badge/license-Apache%20License%202.0-E91E63.svg?style=flat-square" /></a>
   </h1>
 </p>
