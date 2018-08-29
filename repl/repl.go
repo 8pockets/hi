@@ -4,18 +4,25 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-
-	"github.com/8pockets/hi/evaluator"
-	"github.com/8pockets/hi/lexer"
-	"github.com/8pockets/hi/object"
-	"github.com/8pockets/hi/parser"
+	"monkey/compiler"
+	"monkey/lexer"
+	"monkey/object"
+	"monkey/parser"
+	"monkey/vm"
 )
 
 const PROMPT = ">> "
 
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
-	env := object.NewEnvironment()
+
+	constants := []object.Object{}
+	globals := make([]object.Object, vm.GlobalsSize)
+
+	symbolTable := compiler.NewSymbolTable()
+	for i, v := range object.Builtins {
+		symbolTable.DefineBuiltin(i, v.Name)
+	}
 
 	for {
 		fmt.Printf(PROMPT)
@@ -34,11 +41,25 @@ func Start(in io.Reader, out io.Writer) {
 			continue
 		}
 
-		evaluated := evaluator.Eval(program, env)
-		if evaluated == nil || evaluated.Type() == object.NULL_OBJ {
+		comp := compiler.NewWithState(symbolTable, constants)
+		err := comp.Compile(program)
+		if err != nil {
+			fmt.Fprintf(out, "Woops! Compilation failed:\n %s\n", err)
 			continue
 		}
-		io.WriteString(out, evaluated.Inspect())
+
+		code := comp.Bytecode()
+		constants = code.Constants
+
+		machine := vm.NewWithGlobalsStore(code, globals)
+		err = machine.Run()
+		if err != nil {
+			fmt.Fprintf(out, "Woops! Executing bytecode failed:\n %s\n", err)
+			continue
+		}
+
+		lastPopped := machine.LastPoppedStackElem()
+		io.WriteString(out, lastPopped.Inspect())
 		io.WriteString(out, "\n")
 	}
 }
