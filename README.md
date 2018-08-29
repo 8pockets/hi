@@ -14,6 +14,8 @@ Core implementation is 100% pure **Go**.
 
 This is the main source code repository for Hilang. It contains the compiler, standard library, and documentation.
 
+<img src="/hi-console.png" height="600">
+
 ## Features
 
 * **Statically typed** - Static typing makes it easier to write safe and efficient interfaces between gluon and the host application.
